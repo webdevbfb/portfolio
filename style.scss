@@ -61,6 +61,9 @@ header {
   z-index: 1;
 
   .titles1 {
+    h1 {
+      padding-bottom: 20px;
+    }
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -72,7 +75,12 @@ header {
     border-radius: 50px;
     font-size: x-large;
     color: $mint-cream;
-    background-color: $davys-gray;
+    text-shadow: 
+    -1px -1px 10px black,  
+    1px -1px 10px black,
+    -1px 1px 10px black,
+    1px 1px 10px black; /* Schatten in verschiedenen Richtungen */
+    background: linear-gradient(to right bottom, $gunmetal, $cadet-gray);
     z-index: 2;
 
     h3 {
@@ -84,7 +92,6 @@ header {
 
 .banner2 {
   margin-top: 50px;
-
   margin-bottom: 50px;
   display: flex;
   height: 90vh;
@@ -114,7 +121,7 @@ header {
   border-radius: 50px;
   border: 5px solid $mint-cream;
   color: $mint-cream;
-  background-color: $davys-gray;
+  background-color: $cadet-gray;
   z-index: 1;
 }
 
@@ -141,6 +148,10 @@ form {
   display: grid;
   justify-items: stretch;
   align-self: center;
+}
+
+input:hover, textarea:hover {
+  background-color: $mint-cream;
 }
 
 input,
@@ -173,8 +184,8 @@ a {
 button {
   margin-top: 5px;
   border: none;
-  color: $mint-cream;
-  background-color: $cadet-gray;
+  color: $cadet-gray;
+  background-color: $mint-cream;
 }
 
 a:hover {
@@ -184,7 +195,7 @@ a:hover {
 
 button:hover {
   background-color: $gunmetal;
-  color: $cadet-gray;
+  color: $mint-cream;
 }
 
 @media (max-width: 768px) {

@@ -138,10 +138,17 @@
           <div class="footer-section contact">
             <h2><i class="fa-solid fa-file-signature"></i> Kontakt</h2>
             <p>
-              <i class="fa fa-envelope"></i> bilal.bagci@dci.org<br />
-              <i class="fa fa-mobile"></i> 123-456-7890<br />
-              <i class="fa fa-location-dot"></i> Maxstraße 123, 67075
-              Ludwigshafen
+              <i class="fa fa-envelope"></i> <a href="mailto:bilal.bagci@dci-student.org">bilal.bagci@dci-student.org</a><br />
+              <i class="fa fa-mobile"></i> <a href="tel:+1234567890">+1234567890</a><br />
+              <i class="fa fa-location-dot"></i> <a href="#" id="mapLink">Schulstraße 21, 67059 Ludwigshafen am Rhein, Deutschland</a>
+              <script>
+                document.getElementById("mapLink").addEventListener("click", function(event) {
+                  event.preventDefault(); // Verhindert, dass der Link die Seite direkt navigiert
+                  
+                  // Öffne ein Popup-Fenster mit der Google Maps-URL
+                  window.open("https://www.google.com/maps?q=Schulstra%C3%9Fe%2021,%2067059%20Ludwigshafen%20am%20Rhein,%20Deutschland", "MapPopup", "width=600,height=400");
+                });
+                </script>
             </p>
           </div>
           <div class="footer-section links">
