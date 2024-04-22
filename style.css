@@ -32,7 +32,7 @@ header {
 }
 header nav {
   display: flex;
-  justify-content: flex-end;
+  justify-content: space-between;
 }
 header li {
   display: inline;
@@ -150,6 +150,10 @@ li {
   list-style: none;
 }
 
+i {
+  padding-bottom: 5px;
+}
+
 a {
   color: #8baaad;
   text-decoration: none;
@@ -164,6 +168,7 @@ button {
 
 a:hover {
   color: white;
+  text-shadow: 0px 0px 5px black;
 }
 
 button:hover {
@@ -173,7 +178,11 @@ button:hover {
 
 @media (max-width: 768px) {
   body {
-    padding: 20px;
+    padding: 0px;
+    margin: 0px;
+  }
+  nav {
+    font-size: x-large;
   }
   main {
     padding-top: 20px;
@@ -183,11 +192,13 @@ button:hover {
     width: auto;
     flex-direction: column;
     align-items: center;
+    padding: 30px 10px 10px;
   }
   .banner1 .titles1 {
     width: 100%;
     height: auto;
-    border-radius: 0;
+    border: 2px solid;
+    border-radius: 20px;
     padding: 20px;
   }
   .banner2 {
@@ -195,6 +206,9 @@ button:hover {
     align-items: center;
     height: auto;
     width: auto;
+    margin: 10px;
+    border: 2px solid;
+    border-radius: 20px;
   }
   .banner2 .titles2 {
     width: 100%;
@@ -205,6 +219,9 @@ button:hover {
     align-items: center;
     height: auto;
     width: auto;
+    margin: 10px;
+    border: 2px solid;
+    border-radius: 20px;
   }
   .banner3 .titles3 {
     width: 100%;
