@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /* SCSS HEX */
 * {
   box-sizing: border-box;
@@ -11,7 +12,6 @@ html {
 
 body {
   font-family: sans-serif;
-  background-color: #f4fff8;
   overflow-x: hidden;
 }
 
@@ -45,7 +45,7 @@ header li {
   justify-content: center;
   align-items: flex-start;
   box-shadow: 0 0 10px #000f08;
-  padding-top: 26px;
+  padding-top: 35px;
   height: 100vh;
   width: 100vw;
   color: #f4fff8;
@@ -64,12 +64,12 @@ header li {
   border-radius: 50px;
   font-size: x-large;
   color: #f4fff8;
-  text-shadow: -1px -1px 10px black, 1px -1px 10px black, -1px 1px 10px black, 1px 1px 10px black; /* Schatten in verschiedenen Richtungen */
-  background: linear-gradient(to right bottom, #1c3738, #8baaad);
+  background: #1c3738;
   z-index: 2;
 }
 .banner1 .titles1 h1 {
   padding-bottom: 20px;
+  text-shadow: -1px -1px 5px rgba(0, 0, 0, 0.5), 1px -1px 10px rgba(0, 0, 0, 0.5), -1px 1px 0px rgba(0, 0, 0, 0.5), 1px 1px 5px rgba(0, 0, 0, 0.5); /* Schatten in verschiedenen Richtungen */
 }
 .banner1 .titles1 h3 {
   font-weight: 100;
@@ -77,66 +77,86 @@ header li {
 }
 
 .banner2 {
-  margin-top: 50px;
-  margin-bottom: 50px;
+  justify-content: center;
+  padding-top: 50px;
+  width: 100vw;
+  height: 100vh;
+  box-shadow: 0 10px 10px -10px #000f08;
   display: flex;
+  z-index: 2;
+}
+.banner2 .titles2 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
   height: 90vh;
   width: 70vw;
   border-radius: 50px;
   border: 5px solid #8baaad;
   color: #8baaad;
   background-color: #f4fff8;
-  z-index: 1;
-}
-
-.titles2 {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: flex-start;
   padding-right: 40px;
   padding-left: 50px;
   z-index: 2;
 }
 
 .banner3 {
-  margin-bottom: 50px;
   display: flex;
+  flex-direction: column;
+  align-items: center;
+  display: flex;
+  padding-top: 50px;
+  height: 100vh;
+  width: 100vw;
+  color: #f4fff8;
+  background-color: #1c3738;
+  z-index: 1;
+}
+.banner3 .titles3 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
   height: 90vh;
   width: 70vw;
   border-radius: 50px;
-  border: 5px solid #f4fff8;
-  color: #f4fff8;
-  background-color: #8baaad;
-  z-index: 1;
+  border: 5px solid #8baaad;
+  color: #8baaad;
+  background-color: #f4fff8;
+  z-index: 2;
+}
+.banner3 form {
+  height: 80%;
+  width: 60vw;
+  display: grid;
+  justify-content: space-evenly;
+  align-self: center;
 }
 
 h2 {
   margin-bottom: 10px;
 }
 
-p {
-  margin-bottom: 20px;
+hr {
+  margin-top: 5px;
+  margin-bottom: 5px;
+  border: none; /* Entferne die standardmäßige Linie */
+  height: 1px; /* Höhe der Linie */
+  background-color: rgba(128, 128, 128, 0.205); /* Farbe der Linie */
 }
 
 .titles3 {
   display: flex;
   justify-content: center;
-  align-items: flex-start;
+  align-items: center;
   padding-right: 40px;
-  padding-left: 50px;
+  padding-left: 40px;
   z-index: 2;
 }
 
-form {
-  height: 80%;
-  width: 60vw;
-  display: grid;
-  justify-items: stretch;
-  align-self: center;
-}
-
-input:hover, textarea:hover {
+input:hover,
+textarea:hover {
   background-color: #f4fff8;
 }
 
@@ -169,7 +189,7 @@ a {
 
 button {
   margin-top: 5px;
-  border: none;
+  border: 1px solid rgba(128, 128, 128, 0.178);
   color: #8baaad;
   background-color: #f4fff8;
 }
@@ -180,7 +200,7 @@ a:hover {
 }
 
 button:hover {
-  background-color: #1c3738;
+  background-color: #000f08;
   color: #f4fff8;
 }
 
@@ -198,8 +218,6 @@ button:hover {
   .banner1 {
     height: auto;
     width: auto;
-    flex-direction: column;
-    align-items: center;
     padding: 30px 10px 10px;
   }
   .banner1 .titles1 {
@@ -213,34 +231,22 @@ button:hover {
     font-size: x-large;
   }
   .banner2 {
-    flex-direction: column;
-    align-items: center;
-    height: auto;
-    width: auto;
-    margin: 10px;
-    border: 2px solid;
-    border-radius: 20px;
+    height: 100vh;
+    width: 100vw;
+    padding: 50px 20px 0px 20px;
   }
   .banner2 .titles2 {
     width: 100%;
     padding: 20px;
-  }
-  .banner3 {
-    flex-direction: column;
-    align-items: center;
-    height: auto;
-    width: auto;
-    margin: 10px;
     border: 2px solid;
-    border-radius: 20px;
+    border-radius: 10px;
   }
   .banner3 .titles3 {
-    width: 100%;
-    padding: 20px;
-  }
-  form {
-    width: 100%;
-    height: auto;
+    width: 90vw;
+    padding-right: 10px;
+    padding-left: 10px;
+    border: 2px solid;
+    border-radius: 10px;
   }
   form button {
     height: 30px;
