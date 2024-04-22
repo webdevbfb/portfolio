@@ -182,7 +182,7 @@ button:hover {
     margin: 0px;
   }
   nav {
-    font-size: x-large;
+    font-size: small;
   }
   main {
     padding-top: 20px;
@@ -200,6 +200,9 @@ button:hover {
     border: 2px solid;
     border-radius: 20px;
     padding: 20px;
+  }
+  .banner1 .titles1 h1 {
+    font-size: x-large;
   }
   .banner2 {
     flex-direction: column;
@@ -230,6 +233,9 @@ button:hover {
   form {
     width: 100%;
     height: auto;
+  }
+  form button {
+    height: 30px;
   }
 }
 
